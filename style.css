@@ -1,0 +1,91 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px; /* スマホ基準の基本サイズ */
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* タブレット〜PCでは少し大きく */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px; /* 大画面ではさらに大きめ */
+    }
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.headline-container {
+    text-align: center;
+    padding: 2em 1em 1em;
+}
+
+.line {
+    height: 4px;
+    margin: 0 auto 10px;
+    width: 50px;
+    border-radius: 2px;
+}
+.red { background-color: #e74c3c; }
+.green { background-color: #2ecc71; }
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    line-height: 1.3;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .mobile-break {
+        display: inline;
+    }
+}
+
+h2 {
+    margin-top: 2em;
+    font-size: 1.5em;
+    border-left: 6px solid #3498db;
+    padding-left: 0.5em;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 1.2em;
+    list-style: disc;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.video-gallery iframe {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
